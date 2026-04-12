@@ -42,13 +42,27 @@ public class App {
         Integer[] vetor = gerarVetorObjetos(tam);
 
         BubbleSort<Integer> bolha = new BubbleSort<>();
+        InsertionSort<Integer> insertion = new InsertionSort<>();
+        SelectionSort<Integer> selection = new SelectionSort<>();
 
         Integer[] vetorOrdenadoBolha = bolha.ordenar(vetor);
+        Integer[] vetorOrdenadoInsertion = insertion.ordenar(vetor);
+        Integer[] vetorOrdenadoSelection = selection.ordenar(vetor);
 
         System.out.println("\nVetor ordenado método Bolha:");
         System.out.println("Comparações: " + bolha.getComparacoes());
         System.out.println("Movimentações: " + bolha.getMovimentacoes());
         System.out.println("Tempo de ordenação (ms): " + bolha.getTempoOrdenacao());
+
+        System.out.println("\nVetor ordenado método de inserção:");
+        System.out.println("Comparações: " + insertion.getComparacoes());
+        System.out.println("Movimentações: " + insertion.getMovimentacoes());
+        System.out.println("Tempo de ordenação (ms): " + insertion.getTempoOrdenacao());
+
+        System.out.println("\nVetor ordenado método de seleção:");
+        System.out.println("Comparações: " + selection.getComparacoes());
+        System.out.println("Movimentações: " + selection.getMovimentacoes());
+        System.out.println("Tempo de ordenação (ms): " + selection.getTempoOrdenacao());
 
         /* TO DO
         *Fazer a implementacao do restante do main para a ordenacao 
